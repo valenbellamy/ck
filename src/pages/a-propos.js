@@ -105,7 +105,7 @@ function aProposPage({ data }) {
             </div>
             <div className="text">
               <p>
-                Dessin, Storyboard, ... Bo. Magnat. Caborro mi, sus rem
+                Dessin, Storyboard, ... Bon. Magnat. Caborro mi, sus rem
                 reptiustini cusam voluptae parum neceped quo minum ut{" "}
               </p>
             </div>
