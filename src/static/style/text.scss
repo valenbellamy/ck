@@ -1,0 +1,29 @@
+a,
+span,
+div,
+h3,
+h4,
+h5,
+h6,
+li,
+button {
+}
+
+p {
+  font-family: "Minion Medium";
+  font-size: calc(#{$main-size} * 2.1);
+  line-height: calc(#{$main-size} * 2.4);
+}
+
+h1,
+h2 {
+  font-family: "DM Medium";
+  font-size: calc(#{$main-size} * 3);
+  color: $primary-text;
+}
+
+h1,
+h2,
+a,
+button {
+}

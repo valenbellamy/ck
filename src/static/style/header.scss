@@ -1,0 +1,40 @@
+header {
+  position: fixed;
+  right: 5rem;
+  top: 5rem;
+  z-index: 3;
+  .cube {
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: black;
+    &.--bis {
+      top: 5rem;
+      background-color: lighten(black, 30%);
+    }
+  }
+  nav {
+    text-align: right;
+    ul {
+      li {
+        a {
+          color: $primary-text;
+          font-family: "DM Medium";
+          font-size: calc(#{$main-size} * 5);
+          line-height: calc(#{$main-size} * 6.4);
+          &.--active {
+            color: white;
+          }
+        }
+      }
+    }
+    // .separator {
+    //   font-family: "DM Medium";
+    //   font-size: calc(#{$main-size} * 5);
+    //   line-height: calc(#{$main-size} * 6.4);
+    //   color: $primary-text;
+    // }
+  }
+}

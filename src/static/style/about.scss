@@ -1,0 +1,48 @@
+.about {
+  section {
+    position: relative;
+    padding: 10rem 15%;
+    display: flex;
+    flex-direction: flex-start;
+    &.--specialPaddingTop {
+      padding-top: 10rem;
+    }
+    .blk {
+      width: 50%;
+      h2 {
+        font-size: calc(#{$main-size} * 4);
+      }
+      h3 {
+        font-family: "DM Regular";
+        font-size: calc(#{$main-size} * 3);
+      }
+      .text {
+        font-size: calc(#{$main-size} * 2.1);
+        line-height: calc(#{$main-size} * 2.4);
+      }
+      .icons {
+        display: flex;
+        svg {
+          width: 5rem;
+        }
+      }
+      &.--image {
+        padding-right: 10%;
+      }
+      // p {
+      //   width: 60%;
+      // }
+    }
+    .cover-trip {
+      position: absolute;
+      top: 0rem;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      z-index: 2;
+      .gatsby-image-wrapper {
+        height: 100%;
+      }
+    }
+  }
+}

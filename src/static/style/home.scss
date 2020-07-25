@@ -1,0 +1,67 @@
+.images {
+  display: flex;
+  width: 70%;
+  margin: 0 auto 20rem auto;
+  > div {
+    width: calc(50% - 2.5rem);
+    &.images--left {
+      margin-right: 2.5rem;
+    }
+    &.images--right {
+      margin-left: 2.5rem;
+    }
+    .image {
+      position: relative;
+      margin-bottom: 5rem;
+      .image__title {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        z-index: 2;
+        h2 {
+          color: inherit;
+          text-transform: uppercase;
+          font-family: "DM Regular";
+          font-size: calc(#{$main-size} * 2.4);
+          line-height: calc(#{$main-size} * 2.7);
+        }
+      }
+    }
+    .card {
+      position: relative;
+      padding: 6rem 6rem 6rem 14rem;
+      background-color: white;
+      .border {
+        position: absolute;
+        top: 6rem;
+        left: 6rem;
+        width: 2rem;
+        height: calc(100% - 12rem);
+        background-color: $primary-text;
+      }
+      h2 {
+        font-family: "DM Medium";
+        font-size: calc(#{$main-size} * 4.5);
+        line-height: calc(#{$main-size} * 4.9);
+      }
+      .separator {
+        margin-bottom: 2rem;
+      }
+      h3 {
+        color: inherit;
+        font-size: calc(#{$main-size} * 2.2);
+        line-height: 1;
+        font-family: "DM Medium";
+      }
+    }
+  }
+}
+
+.logo {
+  width: 16rem;
+  margin: 0 auto 20rem auto;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
