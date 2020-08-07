@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 
 function N20({ data }) {
   return (
-    <Layout>
+    <Layout headerClass="tertiary" activeProjet={true}>
       <SEO title="N20" />
       <div className="projet">
         <section className="">

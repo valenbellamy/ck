@@ -1,19 +1,40 @@
 .images {
   display: flex;
-  width: 70%;
+  width: 75%;
   margin: 0 auto 20rem auto;
+  @media (max-width: $breakdown-lg) {
+    margin: 0 auto 15rem auto;
+    width: 100%;
+    padding: 0rem 5rem;
+  }
+  @media (max-width: $breakdown-sm) {
+    flex-direction: column;
+    padding: 0rem 2rem;
+  }
   > div {
     width: calc(50% - 2.5rem);
+    @media (max-width: $breakdown-sm) {
+      width: 100%;
+    }
     &.images--left {
       margin-right: 2.5rem;
+      @media (max-width: $breakdown-sm) {
+        margin-right: 0rem;
+      }
     }
     &.images--right {
       margin-left: 2.5rem;
+      @media (max-width: $breakdown-sm) {
+        margin-left: 0rem;
+      }
     }
     .image {
       position: relative;
       display: block;
       margin-bottom: 5rem;
+      @media (max-width: $breakdown-sm) {
+        margin-bottom: 2rem;
+      }
       .image__title {
         position: absolute;
         top: 2rem;
@@ -32,6 +53,12 @@
       position: relative;
       padding: 6rem 6rem 6rem 14rem;
       background-color: white;
+      @media (max-width: $breakdown-sm) {
+        margin-bottom: 2rem;
+      }
+      @media (max-width: $breakdown-md) {
+        padding: 4rem 4rem 4rem 4rem;
+      }
       .border {
         position: absolute;
         top: 6rem;
@@ -39,6 +66,9 @@
         width: 2rem;
         height: calc(100% - 12rem);
         background-color: $primary-text;
+        @media (max-width: $breakdown-md) {
+          display: none;
+        }
       }
       h2 {
         font-family: "DM Medium";
@@ -61,6 +91,10 @@
 .logo {
   width: 16rem;
   margin: 0 auto 20rem auto;
+  @media (max-width: $breakdown-md) {
+    width: 12rem;
+    margin: 0 auto 15rem auto;
+  }
   svg {
     width: 100%;
     height: auto;

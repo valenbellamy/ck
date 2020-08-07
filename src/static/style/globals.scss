@@ -127,3 +127,25 @@
 .mtn-5 {
   margin-top: -5rem;
 }
+
+.hover-line {
+  position: relative;
+  &:hover {
+    &:before {
+      width: 100%;
+      right: auto;
+      left: 0px;
+    }
+  }
+  &:before {
+    content: "";
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 0px;
+    left: auto;
+    right: 0px;
+    width: 0%;
+    height: 1px;
+    background-color: $primary-text;
+  }
+}

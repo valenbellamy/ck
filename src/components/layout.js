@@ -6,7 +6,7 @@ import Header from "./header"
 import "../static/fonts/fonts.css"
 import "../static/style/index.scss"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, headerClass, activeProjet }) => {
   useEffect(() => {
     document.body.style.visibility = "visible"
   }, [])
@@ -19,10 +19,13 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header
+        activeProjet={activeProjet}
+        headerClass={headerClass}
+        siteTitle={data.site.siteMetadata.title}
+      />
       <div>
         <main>{children}</main>
       </div>
@@ -32,6 +35,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  activeProjet: PropTypes.bool,
 }
 
 export default Layout

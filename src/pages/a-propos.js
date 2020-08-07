@@ -7,11 +7,11 @@ import Img from "gatsby-image"
 
 function aProposPage({ data }) {
   return (
-    <Layout>
+    <Layout headerClass="secondary">
       <SEO title="A propos" />
       <div className="about">
         <section className="--specialPaddingTop">
-          <div className="blk">
+          <div className="blk --noMarginXs">
             <div className="separator --mignon --lg c-text mb-5">_</div>
             <p className="fs-lg c-text">
               Salut! Je suis graphiste et travaille actuellement en tant
@@ -50,7 +50,7 @@ function aProposPage({ data }) {
               </span>
             </div>
           </div>
-          <div className="blk">
+          <div className="blk --noMarginXs">
             <h3 className="c-white">Formation</h3>
             <div className="separator --dmRegular --sm c-white mb-1">-</div>
             <div className="text ff-mignon c-white mb-2">
@@ -75,7 +75,7 @@ function aProposPage({ data }) {
         <section>
           <div className="blk">
             <h2 className="c-text mb-1">Logiciels</h2>
-            <div className="separator --dmRegular --sm c-text mb-2">-</div>
+            <div className="separator --dmRegular --sm c-text">-</div>
             <div className="text mb-5">
               <span className="ff-mignon c-text">Expert:</span>
               <br></br>
@@ -94,7 +94,7 @@ function aProposPage({ data }) {
               </div>
             </div>
           </div>
-          <div className="blk">
+          <div className="blk --noMarginXs">
             <h2 className="c-text mb-1">Techniques:</h2>
             <div className="separator --dmRegular --sm c-text">-</div>
             <div className="text mb-5">
@@ -112,10 +112,10 @@ function aProposPage({ data }) {
           </div>
         </section>
         <section className="bg-dark">
-          <div className="blk">
+          <div className="blk --noMarginXs">
             <h2 className="c-white mb-1">Techniques</h2>
-            <div className="separator --dmRegular --sm c-white mb-3">-</div>
-            <div className="text ff-mignon c-white mb-2">
+            <div className="separator --dmRegular --sm c-white mb-2">-</div>
+            <div className="text ff-mignon c-white">
               Voyage autour du monde sans avion
               <br></br>
               <span className="ff-mignon-italic c-white">
@@ -137,7 +137,7 @@ function aProposPage({ data }) {
               clement.karl.d@gmail.com
             </div>
           </div>
-          <div className="blk --image">
+          <div className="blk --image --noMarginXs">
             <Img fluid={data.img1.childImageSharp.fluid} />
           </div>
         </section>

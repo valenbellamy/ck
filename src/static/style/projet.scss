@@ -2,16 +2,29 @@
   section {
     background-color: white;
     padding: 10rem 15%;
+    @media (max-width: $breakdown-lg) {
+      padding: 10rem 5rem;
+    }
+    @media (max-width: $breakdown-sm) {
+      padding: 5rem 2rem;
+    }
     h1 {
       font-size: calc(#{$main-size} * 5);
       line-height: calc(#{$main-size} * 6.4);
     }
     p {
       width: 85%;
+      @media (max-width: $breakdown-sm) {
+        width: 100%;
+      }
     }
     .gatsby-image-wrapper {
       margin: 10rem auto 0rem auto;
       width: 70%;
+      @media (max-width: $breakdown-sm) {
+        margin: 5rem auto 0rem auto;
+        width: 100%;
+      }
     }
   }
 }

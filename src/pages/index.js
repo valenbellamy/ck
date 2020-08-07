@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
+    <Layout activeProjet={true}>
       <SEO title="Home" />
       <div className="logo">
         <svg
