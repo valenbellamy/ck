@@ -6,6 +6,18 @@
   color: $primary-text;
 }
 
+.c-text-secondary {
+  color: $secondary-text;
+}
+
+.c-text-secondary {
+  color: $secondary-text;
+}
+
+.c-text-tertiary {
+  color: $tertiary-text;
+}
+
 .c-primary {
   color: $brand-primary;
 }
@@ -18,9 +30,18 @@
   color: white;
 }
 
+.c-black {
+  color: black;
+}
+
 .fs-lg {
   font-size: calc(#{$main-size} * 2.5);
   line-height: calc(#{$main-size} * 3.3);
+}
+
+.fs-xl {
+  font-size: calc(#{$main-size} * 3);
+  line-height: calc(#{$main-size} * 4);
 }
 
 .ff-mignon {
@@ -93,6 +114,14 @@
 
 .mt-2 {
   margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
 }
 
 .mtn-5 {

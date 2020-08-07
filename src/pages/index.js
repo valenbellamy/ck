@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
             </div>
             <Img fluid={data.img1.childImageSharp.fluid} />
           </div>
-          <div className="image">
+          <Link to="/projet/n20" className="image">
             <div className="image__title c-text">
               <div className="separator c-text --dmRegular --xs">-</div>
               <h2>
@@ -50,7 +50,7 @@ const IndexPage = ({ data }) => {
               </h2>
             </div>
             <Img fluid={data.img2.childImageSharp.fluid} />
-          </div>
+          </Link>
           <div className="card c-text">
             <div className="border"></div>
             <h2>Et si nous travaillons ensemble?</h2>

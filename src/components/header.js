@@ -7,7 +7,7 @@ const Header = ({ siteTitle }) => (
     {/* <div class="cube"></div>
     <div class="cube --bis"></div> */}
     <nav>
-      <div class="separator --dm --md c-text">_</div>
+      <div className="separator --dm --md c-text">_</div>
       <ul>
         <li>
           <Link to="/" activeClassName="--active">
@@ -15,10 +15,10 @@ const Header = ({ siteTitle }) => (
           </Link>
         </li>
         <li>
-          <Link to="a-propos">About</Link>
+          <Link to="/a-propos">About</Link>
         </li>
       </ul>
-      <div class="separator --dm --md c-text">_</div>
+      <div className="separator --dm --md c-text">_</div>
     </nav>
   </header>
 )
