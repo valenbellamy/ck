@@ -33,7 +33,7 @@ function N20({ data }) {
           </p>
           <Img
             fluid={data.img1.childImageSharp.fluid}
-            style={{ marginBottom: "10rem" }}
+            className="--specialMargin"
           />
           <p className="fs-xl c-text-secondary">
             Logo:{" "}

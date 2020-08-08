@@ -11,6 +11,10 @@
     h1 {
       font-size: calc(#{$main-size} * 5);
       line-height: calc(#{$main-size} * 6.4);
+      @media (max-width: $breakdown-sm) {
+        font-size: calc(#{$main-size} * 5 * 0.8);
+        line-height: calc(#{$main-size} * 6.4 * 0.8);
+      }
     }
     p {
       width: 85%;
@@ -24,6 +28,12 @@
       @media (max-width: $breakdown-sm) {
         margin: 5rem auto 0rem auto;
         width: 100%;
+      }
+      &.--specialMargin {
+        margin-bottom: 10rem;
+        @media (max-width: $breakdown-sm) {
+          margin-bottom: 5rem;
+        }
       }
     }
   }

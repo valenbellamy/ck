@@ -13,6 +13,10 @@ p {
   font-family: "Minion Medium";
   font-size: calc(#{$main-size} * 2.1);
   line-height: calc(#{$main-size} * 2.4);
+  @media (max-width: $breakdown-sm) {
+    font-size: calc(#{$main-size} * 2.1 * 0.8);
+    line-height: calc(#{$main-size} * 2.4 * 0.8);
+  }
 }
 
 h1,
@@ -20,10 +24,7 @@ h2 {
   font-family: "DM Medium";
   font-size: calc(#{$main-size} * 3);
   color: $primary-text;
-}
-
-h1,
-h2,
-a,
-button {
+  @media (max-width: $breakdown-sm) {
+    font-size: calc(#{$main-size} * 3 * 0.8);
+  }
 }

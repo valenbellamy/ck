@@ -30,14 +30,24 @@
       }
       h2 {
         font-size: calc(#{$main-size} * 4);
+        @media (max-width: $breakdown-sm) {
+          font-size: calc(#{$main-size} * 4 * 0.8);
+        }
       }
       h3 {
         font-family: "DM Regular";
         font-size: calc(#{$main-size} * 3);
+        @media (max-width: $breakdown-sm) {
+          font-size: calc(#{$main-size} * 3 * 0.8);
+        }
       }
       .text {
         font-size: calc(#{$main-size} * 2.1);
         line-height: calc(#{$main-size} * 2.4);
+        @media (max-width: $breakdown-sm) {
+          font-size: calc(#{$main-size} * 2.1 * 0.8);
+          line-height: calc(#{$main-size} * 2.4 * 0.8);
+        }
       }
       .icons {
         display: flex;

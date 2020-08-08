@@ -46,6 +46,10 @@
           font-family: "DM Regular";
           font-size: calc(#{$main-size} * 2.4);
           line-height: calc(#{$main-size} * 2.7);
+          @media (max-width: $breakdown-sm) {
+            font-size: calc(#{$main-size} * 2.4 * 0.8);
+            line-height: calc(#{$main-size} * 2.7 * 0.8);
+          }
         }
       }
     }
@@ -74,6 +78,10 @@
         font-family: "DM Medium";
         font-size: calc(#{$main-size} * 4.5);
         line-height: calc(#{$main-size} * 4.9);
+        @media (max-width: $breakdown-sm) {
+          font-size: calc(#{$main-size} * 4.5 * 0.8);
+          line-height: calc(#{$main-size} * 4.9 * 0.8);
+        }
       }
       .separator {
         margin-bottom: 2rem;
@@ -83,6 +91,9 @@
         font-size: calc(#{$main-size} * 2.2);
         line-height: 1;
         font-family: "DM Medium";
+        @media (max-width: $breakdown-sm) {
+          font-size: calc(#{$main-size} * 2.2 * 0.8);
+        }
       }
     }
   }

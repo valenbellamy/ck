@@ -37,11 +37,19 @@
 .fs-lg {
   font-size: calc(#{$main-size} * 2.5);
   line-height: calc(#{$main-size} * 3.3);
+  @media (max-width: $breakdown-sm) {
+    font-size: calc(#{$main-size} * 2.5 * 0.8);
+    line-height: calc(#{$main-size} * 3.3 * 0.8);
+  }
 }
 
 .fs-xl {
   font-size: calc(#{$main-size} * 3);
   line-height: calc(#{$main-size} * 4);
+  @media (max-width: $breakdown-sm) {
+    font-size: calc(#{$main-size} * 3 * 0.8);
+    line-height: calc(#{$main-size} * 4 * 0.8);
+  }
 }
 
 .ff-mignon {

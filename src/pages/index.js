@@ -59,7 +59,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
         <div className="images--right">
-          <div className="image">
+          <Link to="/projet/n20" className="image">
             <div className="image__title c-secondary">
               <div className="separator c-secondary --dmRegular --xs">-</div>
               <h2>
@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
               </h2>
             </div>
             <Img fluid={data.img2.childImageSharp.fluid} />
-          </div>
+          </Link>
           <div className="image">
             <div className="image__title c-white">
               <div className="separator c-white --dmRegular --sm">-</div>

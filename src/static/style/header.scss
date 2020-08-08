@@ -3,6 +3,9 @@ header {
   right: 5rem;
   top: 5rem;
   z-index: 3;
+  @media (max-width: $breakdown-sm) {
+    right: 2rem;
+  }
   nav {
     text-align: right;
     ul {
@@ -12,6 +15,10 @@ header {
           font-family: "DM Medium";
           font-size: calc(#{$main-size} * 5);
           line-height: calc(#{$main-size} * 6.4);
+          @media (max-width: $breakdown-sm) {
+            font-size: calc(#{$main-size} * 5 * 0.8);
+            line-height: calc(#{$main-size} * 6.4 * 0.8);
+          }
           &.--active {
             color: white;
           }
