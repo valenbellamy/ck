@@ -6,7 +6,7 @@ import Header from "./header"
 import "../static/fonts/fonts.css"
 import "../static/style/index.scss"
 
-const Layout = ({ children, headerClass, activeProjet }) => {
+const Layout = ({ children, headerClass, activeProjet, transitionStatus }) => {
   useEffect(() => {
     document.body.style.visibility = "visible"
   }, [])
@@ -25,6 +25,7 @@ const Layout = ({ children, headerClass, activeProjet }) => {
         activeProjet={activeProjet}
         headerClass={headerClass}
         siteTitle={data.site.siteMetadata.title}
+        transitionStatus={transitionStatus}
       />
       <div>
         <main>{children}</main>

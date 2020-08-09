@@ -2,6 +2,10 @@
   background-color: $primary-text;
 }
 
+.bg-primary {
+  background-color: $brand-primary;
+}
+
 .c-text {
   color: $primary-text;
 }
@@ -69,6 +73,7 @@
 }
 
 .separator {
+  display: inline-block;
   &.--dm {
     font-family: "DM Medium";
   }
@@ -93,6 +98,12 @@
   &.--lg {
     font-size: calc(#{$main-size} * 9.5);
     line-height: calc(#{$main-size} * 9.5);
+  }
+  &.originLeft {
+    transform-origin: center left;
+  }
+  &.originRight {
+    transform-origin: center right;
   }
 }
 
@@ -155,5 +166,26 @@
     width: 0%;
     height: 1px;
     background-color: $primary-text;
+  }
+}
+
+.anim-wrapper {
+  position: fixed;
+  bottom: 0rem;
+  left: 0rem;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  transform: scaleY(0);
+  transform-origin: center bottom;
+  transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  &.exiting {
+    transform: scaleY(1);
+  }
+  &.--second {
+    transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
+  }
+  &.--third {
+    transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s;
   }
 }

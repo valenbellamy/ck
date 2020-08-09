@@ -1,19 +1,48 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Indesign from "../components/picto/indesign"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import AnimWrapper from "../components/animWrapper"
+import { gsap } from "gsap"
 
-function aProposPage({ data }) {
+function AProposPage({ data, transitionStatus, entry, exit }) {
+  const textEl = useRef(null)
+  const sep1El = useRef(null)
+  const sep2El = useRef(null)
+  const sectionEl = useRef(null)
+
+  useEffect(() => {
+    let tl = gsap.timeline()
+    tl.from(textEl.current, {
+      y: 250,
+      skewY: 15,
+      alpha: 0,
+      duration: 0.6,
+      ease: "power3.inout",
+    })
+      .from(sep1El.current, { scaleX: 0, duration: 0.4, ease: "power3.inout" })
+      .from(
+        sep2El.current,
+        { scaleX: 0, duration: 0.4, ease: "power3.inout" },
+        "<"
+      )
+      .from(sectionEl.current, { alpha: 0, duration: 0.4 }, "<")
+  }, [])
   return (
-    <Layout headerClass="secondary">
+    <Layout headerClass="secondary" transitionStatus={transitionStatus}>
       <SEO title="A propos" />
       <div className="about">
         <section className="--specialPaddingTop">
           <div className="blk --noMarginXs">
-            <div className="separator --mignon --lg c-text mb-5">_</div>
-            <p className="fs-lg c-text">
+            <div
+              className="separator --mignon --lg originRight c-text mb-5"
+              ref={sep1El}
+            >
+              _
+            </div>
+            <p className="fs-lg c-text" ref={textEl}>
               Salut! Je suis graphiste et travaille actuellement en tant
               qu’indépendant à Chartres en Eure et loir. Graphiquement, j’aime
               les visuels épurés et directs, nourris d’une bonne réflexion en
@@ -21,10 +50,15 @@ function aProposPage({ data }) {
               l’enfance. J’accorde une grande importance à produire un travail
               précis au pixel près.
             </p>
-            <div className="separator --mignon --lg c-text mtn-5">_</div>
+            <div
+              className="separator --mignon --lg c-text originLeft mtn-5"
+              ref={sep2El}
+            >
+              _
+            </div>
           </div>
         </section>
-        <section className="bg-dark">
+        <section className="bg-dark" ref={sectionEl}>
           <div className="blk">
             <h3 className="c-secondary">Carrière</h3>
             <div className="separator --dmRegular --sm c-secondary mb-1">-</div>
@@ -141,6 +175,7 @@ function aProposPage({ data }) {
             <Img fluid={data.img1.childImageSharp.fluid} />
           </div>
         </section>
+        <AnimWrapper transitionStatus={transitionStatus} exit={exit} />
       </div>
     </Layout>
   )
@@ -151,18 +186,18 @@ export const imagesQuery = graphql`
     img1: file(relativePath: { eq: "multicolored-skull.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     img2: file(relativePath: { eq: "plant.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
   }
 `
 
-export default aProposPage
+export default AProposPage

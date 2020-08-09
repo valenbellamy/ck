@@ -109,5 +109,45 @@
   svg {
     width: 100%;
     height: auto;
+    fill: none;
+    stroke: #083a4b;
+    stroke-width: 20px;
+    path {
+      // transition-property: stroke-dashoffset;
+      // transition-timing-function: ease-in-out;
+      // transition-duration: 1s;
+      // transition-delay: 50s;
+      &.path1 {
+        stroke-dasharray: 139.3018341064453;
+        stroke-dashoffset: 139.3018341064453;
+      }
+      &.path2 {
+        stroke-dasharray: 478.51934814453125;
+        stroke-dashoffset: 478.51934814453125;
+      }
+      &.path3 {
+        stroke-dasharray: 699.2660522460938;
+        stroke-dashoffset: 699.2660522460938;
+      }
+    }
+    &.--anim {
+      path {
+        transition-property: stroke-dashoffset;
+        transition-timing-function: ease-in-out;
+        stroke-dashoffset: 0;
+        &.path1 {
+          transition-duration: 0.3s;
+          transition-delay: 0.7s;
+        }
+        &.path2 {
+          transition-duration: 0.7s;
+          transition-delay: 0.3s;
+        }
+        &.path3 {
+          transition-duration: 1s;
+          transition-delay: 0s;
+        }
+      }
+    }
   }
 }
