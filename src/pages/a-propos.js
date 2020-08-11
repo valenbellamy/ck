@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useLayoutEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Indesign from "../components/picto/indesign"
@@ -13,7 +13,7 @@ function AProposPage({ data, transitionStatus, entry, exit }) {
   const sep2El = useRef(null)
   const sectionEl = useRef(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     let tl = gsap.timeline()
     tl.from(textEl.current, {
       y: 250,

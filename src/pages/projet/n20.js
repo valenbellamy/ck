@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useLayoutEffect } from "react"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { graphql } from "gatsby"
@@ -9,7 +9,7 @@ import { gsap } from "gsap"
 function N20({ data, transitionStatus, entry, exit }) {
   const topEl = useRef(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.from(topEl.current, {
       y: 300,
       alpha: 0,

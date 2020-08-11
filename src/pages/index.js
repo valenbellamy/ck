@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState, useRef, useLayoutEffect } from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
@@ -39,11 +39,12 @@ const IndexPage = ({ data, transitionStatus, entry, exit }) => {
   const path3El = useRef(null)
   const imagesEl = useRef(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     //console.log(path1El.current.getTotalLength())
-    setTimeout(() => {
-      setAnimation(true)
-    }, 10)
+    // setTimeout(() => {
+    //   setAnimation(true)
+    // }, 10)
+    setAnimation(true)
     gsap.from(imagesEl.current, {
       y: 300,
       alpha: 0,
