@@ -94,6 +94,10 @@
         @media (max-width: $breakdown-sm) {
           font-size: calc(#{$main-size} * 2.2 * 0.8);
         }
+        &:after {
+          content: "";
+          font-family: "Minion Medium";
+        }
       }
     }
   }

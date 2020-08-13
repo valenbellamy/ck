@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import TransitionLink from "gatsby-plugin-transition-link"
 import { gsap } from "gsap"
 
-const TRANSITION_LENGTH = 1
+const TRANSITION_LENGTH = 0.9
 
 const exitTransition = {
   state: { color: "#fed169" },

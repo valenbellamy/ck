@@ -183,9 +183,9 @@
     transform: scaleY(1);
   }
   &.--second {
-    transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
+    transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
   }
   &.--third {
-    transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s;
+    transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
   }
 }
