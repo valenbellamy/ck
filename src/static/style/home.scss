@@ -2,6 +2,8 @@
   display: flex;
   width: 75%;
   margin: 0 auto 20rem auto;
+  // opacity: 0;
+  // transform: translateY(300px) skewY(15);
   @media (max-width: $breakdown-lg) {
     margin: 0 auto 15rem auto;
     width: 100%;
