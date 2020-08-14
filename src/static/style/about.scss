@@ -9,12 +9,12 @@
     }
     @media (max-width: $breakdown-sm) {
       flex-direction: column;
-      padding: 5rem 2rem;
+      padding: 2rem 2rem 5rem 2rem;
     }
     &.--specialPaddingTop {
       padding-top: 10rem;
       @media (max-width: $breakdown-sm) {
-        padding-top: 5rem;
+        padding-top: 0rem;
       }
     }
     .blk {

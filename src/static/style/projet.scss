@@ -6,7 +6,7 @@
       padding: 10rem 5rem;
     }
     @media (max-width: $breakdown-sm) {
-      padding: 5rem 2rem;
+      padding: 2rem 2rem 5rem 2rem;
     }
     h1 {
       font-size: calc(#{$main-size} * 5);

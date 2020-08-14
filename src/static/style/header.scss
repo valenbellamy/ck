@@ -5,6 +5,7 @@ header {
   z-index: 3;
   @media (max-width: $breakdown-sm) {
     right: 2rem;
+    top: 2rem;
   }
   .nav-toggler {
     height: 34px;
