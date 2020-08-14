@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import TransitionLink from "gatsby-plugin-transition-link"
@@ -28,8 +28,27 @@ const entryTransition = {
   },
 }
 
+function debounce(fn, ms) {
+  let timer
+  return () => {
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      timer = null
+      fn.apply(this, arguments)
+    }, ms)
+  }
+}
+
 const Header = ({ siteTitle, headerClass, activeProjet, transitionStatus }) => {
+  const [open, setOpen] = useState(false)
+  const [windowWidth, setWindowWidth] = useState(0)
+
   const headerEl = useRef(null)
+
+  let resizeWindow = () => {
+    setWindowWidth(window.innerWidth)
+  }
+
   useEffect(() => {
     gsap.from(headerEl.current, {
       alpha: 0,
@@ -37,9 +56,42 @@ const Header = ({ siteTitle, headerClass, activeProjet, transitionStatus }) => {
       ease: "power3.inout",
     })
   }, [])
+
+  useEffect(() => {
+    const debouncedHandleResize = debounce(function handleResize() {
+      setWindowWidth(window.innerWidth)
+    }, 500)
+
+    window.addEventListener("resize", debouncedHandleResize)
+
+    return () => {
+      window.removeEventListener("resize", debouncedHandleResize)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (windowWidth > 992) {
+      setOpen(false)
+    }
+  }, [windowWidth])
+
   return (
-    <header className={headerClass} ref={headerEl}>
-      <nav style={{ opacity: transitionStatus === "exiting" ? 0 : 1 }}>
+    <header
+      className={headerClass}
+      ref={headerEl}
+      style={{ opacity: transitionStatus === "exiting" ? 0 : 1 }}
+    >
+      <button
+        className={open ? "nav-toggler --open" : "nav-toggler"}
+        type="button"
+        aria-expanded="false"
+        aria-label="Ouvrir le menu"
+        onClick={() => setOpen(!open)}
+      >
+        <span></span>
+        <span></span>
+      </button>
+      <nav className={open ? "--open" : ""}>
         <div className="separator --dm --md">_</div>
         <ul>
           <li>
@@ -59,6 +111,7 @@ const Header = ({ siteTitle, headerClass, activeProjet, transitionStatus }) => {
               exit={exitTransition}
               entry={entryTransition}
               activeClassName="--active"
+              className={`${!activeProjet ? "--active" : ""}`}
             >
               A propos
             </TransitionLink>

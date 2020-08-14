@@ -1,7 +1,6 @@
 import React, { useRef, useLayoutEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Indesign from "../components/picto/indesign"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import AnimWrapper from "../components/animWrapper"
@@ -31,7 +30,11 @@ function AProposPage({ data, transitionStatus, entry, exit }) {
       .from(sectionEl.current, { alpha: 0, duration: 0.4 }, "<")
   }, [])
   return (
-    <Layout headerClass="secondary" transitionStatus={transitionStatus}>
+    <Layout
+      headerClass="secondary"
+      activeProjet={false}
+      transitionStatus={transitionStatus}
+    >
       <SEO title="A propos" />
       <div className="about">
         <section className="--specialPaddingTop">

@@ -6,6 +6,43 @@ header {
   @media (max-width: $breakdown-sm) {
     right: 2rem;
   }
+  .nav-toggler {
+    height: 34px;
+    width: 40px;
+    padding: 10px;
+    background-color: $brand-primary;
+    margin-left: auto;
+    display: none;
+    position: relative;
+    z-index: 5;
+    span {
+      position: absolute;
+      left: 10px;
+      width: 20px;
+      height: 2px;
+      background-color: white;
+      transition: top 0.3s, bottom 0.3s;
+      &:first-child {
+        top: 10px;
+      }
+      &:last-child {
+        bottom: 10px;
+      }
+    }
+    @media (max-width: $breakdown-md) {
+      display: block;
+    }
+    &.--open {
+      span {
+        &:first-child {
+          top: 15px;
+        }
+        &:last-child {
+          bottom: 15px;
+        }
+      }
+    }
+  }
   nav {
     text-align: right;
     ul {
@@ -28,13 +65,23 @@ header {
     .separator {
       color: $primary-text;
     }
-
-    // .separator {
-    //   font-family: "DM Medium";
-    //   font-size: calc(#{$main-size} * 5);
-    //   line-height: calc(#{$main-size} * 6.4);
-    //   color: $primary-text;
-    // }
+    @media (max-width: $breakdown-md) {
+      position: fixed;
+      top: 0rem;
+      left: 0rem;
+      width: 100%;
+      height: 100%;
+      background-color: $brand-primary;
+      padding: 6rem 5.8rem 0rem 0rem;
+      transform: translateX(-100%);
+      transition: transform 0.4s ease-in-out, opacity 0s;
+      &.--open {
+        transform: translateX(0%);
+      }
+    }
+    @media (max-width: $breakdown-sm) {
+      padding: 6rem 2.8rem 0rem 0rem;
+    }
   }
   &.secondary {
     nav {
@@ -42,6 +89,9 @@ header {
         li {
           a {
             color: $brand-primary;
+            @media (max-width: $breakdown-md) {
+              color: $primary-text;
+            }
             &.--active {
               color: white;
             }
@@ -50,6 +100,9 @@ header {
       }
       .separator {
         color: $brand-primary;
+        @media (max-width: $breakdown-md) {
+          color: $primary-text;
+        }
       }
     }
   }
@@ -61,6 +114,9 @@ header {
             color: $primary-text;
             &.--active {
               color: $brand-primary;
+              @media (max-width: $breakdown-md) {
+                color: white;
+              }
             }
           }
         }
