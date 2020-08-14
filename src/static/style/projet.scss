@@ -23,17 +23,27 @@
       }
     }
     .gatsby-image-wrapper {
-      margin: 10rem auto 0rem auto;
+      margin: 0rem auto 10rem auto;
       width: 70%;
       @media (max-width: $breakdown-sm) {
         margin: 5rem auto 0rem auto;
         width: 100%;
       }
       &.--specialMargin {
-        margin-bottom: 10rem;
+        margin-top: 10rem;
         @media (max-width: $breakdown-sm) {
-          margin-bottom: 5rem;
+          margin-top: 5rem;
         }
+      }
+    }
+    .images {
+      margin-top: 10rem;
+      @media (max-width: $breakdown-sm) {
+        margin-top: 5rem;
+      }
+      .gatsby-image-wrapper {
+        margin: 0rem;
+        width: 100%;
       }
     }
   }

@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import AnimWrapper from "../../components/animWrapper"
 import { gsap } from "gsap"
 
-function N20({ data, transitionStatus, entry, exit }) {
+function MettiCottage({ data, transitionStatus, entry, exit }) {
   const topEl = useRef(null)
 
   useLayoutEffect(() => {
@@ -30,25 +30,24 @@ function N20({ data, transitionStatus, entry, exit }) {
         <section className="">
           <div ref={topEl}>
             <h1 className="c-black">
-              <span className="c-text-secondary">N</span>20
+              <span className="c-text-secondary">Metti </span>cottage
             </h1>
             <div className="separator --mignon --sm  c-text-secondary mb-4">
               _
             </div>
             <p className="fs-xl c-text-secondary mb-1">
-              Congrès bilatéral France/ Japon sur la sécurité nucléaire.{" "}
+              Hôtel d’éco-tourisme dans les molluques du nord en Indonésie.{" "}
               <span className="c-text-tertiary">
-                Création du logo et de l’identité visuelle. Déclinaison en
-                supports imprimés.
+                Création de la marque «Metti cottage», de sa stratégie de
+                communication ainsi que des supports destinés aux clients.
               </span>
             </p>
             <div className="separator --mignon --xs c-text-secondary">_</div>
             <p className="c-text-secondary mt-2">
               Role:{" "}
-              <span className="c-text-tertiary">Directeur artistique</span>
-            </p>
-            <p className="c-text-secondary">
-              Agence: <span className="c-text-tertiary">Exirys</span>
+              <span className="c-text-tertiary">
+                Directeur artistique freelance
+              </span>
             </p>
 
             <Img
@@ -64,9 +63,9 @@ function N20({ data, transitionStatus, entry, exit }) {
           <p className="fs-xl c-text-secondary">
             Logo:{" "}
             <span className="c-text-tertiary">
-              Mélange des drapeaux Français et Japonais. En arrière plan, la
-              silhouette d’un réacteur nucléaire. Le style est sobre afin de
-              coller au caractère officiel du congrès.
+              L’hôtel est situé sur une île d’1 Km carré dont la flore est
+              dominée par les palmiers. Le logo est un condensé des impressions
+              que les visiteurs auront en acostant.
             </span>
           </p>
           <div className="separator --mignon --xs c-text-secondary">_</div>
@@ -76,10 +75,11 @@ function N20({ data, transitionStatus, entry, exit }) {
             className="--specialMargin"
           />
           <p className="fs-xl c-text-secondary">
-            Livret:{" "}
+            Promotion:{" "}
             <span className="c-text-tertiary">
-              Programme du séjour. Visites de différents lieux liés à l’énergie
-              nucléaire, conférences et réunions de travail.
+              Dans un souci de préservation de la nature, la communication de
+              Metti cottage ne se fait que par voie numérique. La promotion se
+              fait sur facebook et la réservation sur Booking.
             </span>
           </p>
           <div className="separator --mignon --xs c-text-secondary">_</div>
@@ -89,10 +89,27 @@ function N20({ data, transitionStatus, entry, exit }) {
             className="--specialMargin"
           />
           <p className="fs-xl c-text-secondary">
-            Gala:{" "}
+            Kit de l’explorateur:{" "}
             <span className="c-text-tertiary">
-              Dîner de gala au musée Jacquemart André, création de cartons
-              d’invitation.
+              Une fois son séjour réservé, le visiteur recevra un plan détaillé
+              d’accès à l’île ainsi qu’une carte des lieux et des activités
+              possibles dans la région.
+            </span>
+          </p>
+          <div className="separator --mignon --xs c-text-secondary">_</div>
+          <Img
+            fluid={data.img4.childImageSharp.fluid}
+            backgroundColor="#083a4b"
+            className="--specialMargin"
+          />
+          <Img
+            fluid={data.img4.childImageSharp.fluid}
+            backgroundColor="#083a4b"
+          />
+          <p className="fs-xl c-text-secondary">
+            Fresques:{" "}
+            <span className="c-text-tertiary">
+              Quelques peintures murales en extra afin d’animer les lieux.
             </span>
           </p>
           <div className="separator --mignon --xs c-text-secondary">_</div>
@@ -136,4 +153,4 @@ export const query = graphql`
   }
 `
 
-export default N20
+export default MettiCottage

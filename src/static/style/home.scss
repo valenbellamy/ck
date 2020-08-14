@@ -1,17 +1,26 @@
-.images {
-  display: flex;
+.home {
   width: 75%;
-  margin: 0 auto 20rem auto;
-  // opacity: 0;
-  // transform: translateY(300px) skewY(15);
+  margin: 0 auto;
   @media (max-width: $breakdown-lg) {
-    margin: 0 auto 15rem auto;
+    margin: 0 auto;
     width: 100%;
     padding: 0rem 5rem;
   }
   @media (max-width: $breakdown-sm) {
-    flex-direction: column;
     padding: 0rem 2rem;
+  }
+  .images {
+    margin-bottom: 20rem;
+    @media (max-width: $breakdown-lg) {
+      margin-bottom: 15rem;
+    }
+  }
+}
+
+.images {
+  display: flex;
+  @media (max-width: $breakdown-sm) {
+    flex-direction: column;
   }
   > div {
     width: calc(50% - 2.5rem);
@@ -107,10 +116,10 @@
 
 .logo {
   width: 16rem;
-  margin: 0 auto 20rem auto;
+  margin: -5px auto 20rem auto;
   @media (max-width: $breakdown-md) {
     width: 12rem;
-    margin: 0 auto 15rem auto;
+    margin: -5px auto 15rem auto;
   }
   svg {
     width: 100%;
@@ -124,17 +133,21 @@
       // transition-duration: 1s;
       // transition-delay: 50s;
       &.path1 {
-        stroke-dasharray: 139.3018341064453;
-        stroke-dashoffset: 139.3018341064453;
+        stroke-dasharray: 168.51425170898438;
+        stroke-dashoffset: 168.51425170898438;
       }
       &.path2 {
-        stroke-dasharray: 478.51934814453125;
-        stroke-dashoffset: 478.51934814453125;
+        stroke-dasharray: 471.4984130859375;
+        stroke-dashoffset: 471.4984130859375;
       }
       &.path3 {
-        stroke-dasharray: 699.2660522460938;
-        stroke-dashoffset: 699.2660522460938;
+        stroke-dasharray: 708.6033935546875;
+        stroke-dashoffset: 708.6033935546875;
       }
+      // &.pathTotal {
+      //   stroke-dasharray: 1348.6163330078125;
+      //   stroke-dashoffset: 1348.6163330078125;
+      // }
     }
     &.--anim {
       path {
@@ -153,6 +166,10 @@
           transition-duration: 1s;
           transition-delay: 0s;
         }
+        // &.pathTotal {
+        //   transition-duration: 2s;
+        //   transition-delay: 0s;
+        // }
       }
     }
   }

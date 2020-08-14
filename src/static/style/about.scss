@@ -54,6 +54,10 @@
         svg {
           width: 5rem;
         }
+        .gatsby-image-wrapper {
+          width: 50%;
+          max-width: 200px;
+        }
       }
       &.--image {
         padding-right: 10%;

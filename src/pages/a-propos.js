@@ -114,17 +114,19 @@ function AProposPage({ data, transitionStatus, entry, exit }) {
               <span className="ff-mignon c-text">Expert:</span>
               <br></br>
               <div className="icons mt-1">
+                <Img fluid={data.img1.childImageSharp.fluid} />
+                {/* <Indesign />
                 <Indesign />
-                <Indesign />
-                <Indesign />
+                <Indesign /> */}
               </div>
             </div>
             <div className="text">
               <span className="ff-mignon c-text">Professionnel</span>
               <br></br>
               <div className="icons mt-1">
-                <Indesign />
-                <Indesign />
+                <Img fluid={data.img2.childImageSharp.fluid} />
+                {/* <Indesign />
+                <Indesign /> */}
               </div>
             </div>
           </div>
@@ -132,13 +134,13 @@ function AProposPage({ data, transitionStatus, entry, exit }) {
             <h2 className="c-text mb-1">Techniques:</h2>
             <div className="separator --dmRegular --sm c-text">-</div>
             <div className="text mb-5">
-              <p>
+              <p className="c-text">
                 Dessin, Storyboard, ... Bo. Magnat. Caborro mi, sus rem
                 reptiustini cusam voluptae parum neceped quo minum ut{" "}
               </p>
             </div>
             <div className="text">
-              <p>
+              <p className="c-text">
                 Dessin, Storyboard, ... Bon. Magnat. Caborro mi, sus rem
                 reptiustini cusam voluptae parum neceped quo minum ut{" "}
               </p>
@@ -158,7 +160,7 @@ function AProposPage({ data, transitionStatus, entry, exit }) {
             </div>
           </div>
           <div className="cover-trip">
-            <Img fluid={data.img2.childImageSharp.fluid} />
+            <Img fluid={data.img3.childImageSharp.fluid} />
           </div>
         </section>
         <section>
@@ -172,7 +174,7 @@ function AProposPage({ data, transitionStatus, entry, exit }) {
             </div>
           </div>
           <div className="blk --image --noMarginXs">
-            <Img fluid={data.img1.childImageSharp.fluid} />
+            <Img fluid={data.img4.childImageSharp.fluid} />
           </div>
         </section>
         <AnimWrapper transitionStatus={transitionStatus} exit={exit} />
@@ -183,16 +185,30 @@ function AProposPage({ data, transitionStatus, entry, exit }) {
 
 export const imagesQuery = graphql`
   query {
-    img1: file(relativePath: { eq: "multicolored-skull.jpg" }) {
+    img1: file(relativePath: { eq: "about/About_1.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    img2: file(relativePath: { eq: "plant.jpg" }) {
+    img2: file(relativePath: { eq: "about/About_2.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    img3: file(relativePath: { eq: "about/About_3.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    img4: file(relativePath: { eq: "about/About_4.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

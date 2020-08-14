@@ -40,120 +40,142 @@ const IndexPage = ({ data, transitionStatus, entry, exit }) => {
   const imagesEl = useRef(null)
 
   useLayoutEffect(() => {
-    //console.log(path1El.current.getTotalLength())
-    // setTimeout(() => {
-    //   setAnimation(true)
-    // }, 10)
+    console.log(path3El.current.getTotalLength())
     setAnimation(true)
     // gsap.to(imagesEl.current, {
-    //   y: 0,
     //   alpha: 1,
-    //   skewY: 0,
     //   duration: 0.6,
     //   ease: "power3.inout",
     // })
-    // gsap.from(imagesEl.current, {
-    //   y: 300,
-    //   alpha: 0,
-    //   skewY: 15,
-    //   duration: 0.6,
-    //   ease: "power3.inout",
-    // })
+    gsap.from(imagesEl.current, {
+      alpha: 0,
+      duration: 0.6,
+      ease: "power3.inout",
+    })
   }, [])
 
   return (
     <Layout activeProjet={true} transitionStatus={transitionStatus}>
-      <SEO title="Home" />
-      <div className="logo">
-        <svg
-          width="225"
-          height="764"
-          viewBox="0 0 225 764"
-          fill="none"
-          className={animation ? "--anim" : ""}
-        >
-          <path
-            className="path1"
-            ref={path1El}
-            d="M121 427L219 526"
-            stroke="#083a4b"
-            strokeWidth="24"
-          />
-          <path
-            className="path2"
-            ref={path2El}
-            d="M106 764V599V434L209 327"
-            stroke="#083a4b"
-            strokeWidth="24"
-          />
-          <path
-            className="path3"
-            ref={path3El}
-            d="M57 412C40.6667 413.333 8 425 8 461C8 497 30 512 57 512C84 512 105.2 494.6 106 461C106.8 427.4 106.333 145 106 1"
-            stroke="#083a4b"
-            strokeWidth="24"
-          />
-        </svg>
+      <SEO title="Accueil" />
+      <div className="home">
+        <div className="logo">
+          <svg
+            className={animation ? "--anim" : ""}
+            x="0px"
+            y="0px"
+            viewBox="0 0 317.55 800"
+          >
+            <path
+              className="path1"
+              ref={path1El}
+              d="M164.41,439.41l118.37,119.94"
+            />
+            <path
+              className="path2"
+              ref={path2El}
+              d="M245.73,357.23L141.52,462.84v323.13"
+            />
+            <path
+              className="path3"
+              ref={path3El}
+              d="M90.6,425.15
+	c-28.12,0-50.92,23.11-50.92,51.61c0,28.5,22.8,51.61,50.92,51.61c28.12,0,50.92-23.11,50.92-51.61V9.77"
+            />
+          </svg>
+        </div>
+        <section className="images" ref={imagesEl}>
+          <div className="images--left">
+            <TransitionLink
+              className="image"
+              to="/projet/metti-cottage"
+              exit={exitTransition}
+              entry={entryTransition}
+            >
+              <div className="image__title c-white">
+                <div className="separator c-white  --dmRegular --xs">-</div>
+                <h2>
+                  metti<br></br>cottage
+                </h2>
+              </div>
+              <Img
+                fluid={data.img1.childImageSharp.fluid}
+                backgroundColor="#083a4b"
+              />
+            </TransitionLink>
+            <TransitionLink
+              to="/projet/n20"
+              exit={exitTransition}
+              entry={entryTransition}
+              className="image"
+            >
+              <div className="image__title c-text">
+                <div className="separator c-text --dmRegular --xs">-</div>
+                <h2>
+                  n<br></br>20
+                </h2>
+              </div>
+              <Img
+                fluid={data.img2.childImageSharp.fluid}
+                backgroundColor="#083a4b"
+              />
+            </TransitionLink>
+            <div className="card c-text">
+              <div className="border"></div>
+              <h2>Et si nous travaillons ensemble?</h2>
+              <div className="separator --dm --md c-text">_</div>
+              <h3>clement.karl.d@gmail.com</h3>
+            </div>
+          </div>
+          <div className="images--right">
+            <TransitionLink
+              to="/projet/heineken"
+              exit={exitTransition}
+              entry={entryTransition}
+              className="image"
+            >
+              <div className="image__title c-secondary">
+                <div className="separator c-secondary --dmRegular --xs">-</div>
+                <h2>Heineken</h2>
+              </div>
+              <Img
+                fluid={data.img2.childImageSharp.fluid}
+                backgroundColor="#083a4b"
+              />
+            </TransitionLink>
+            <TransitionLink
+              to="/projet/dessins"
+              exit={exitTransition}
+              entry={entryTransition}
+              className="image"
+            >
+              <div className="image__title c-white">
+                <div className="separator c-white --dmRegular --sm">-</div>
+                <h2>dessins</h2>
+              </div>
+              <Img
+                fluid={data.img1.childImageSharp.fluid}
+                backgroundColor="#083a4b"
+              />
+            </TransitionLink>
+            <TransitionLink
+              to="/projet/graphismes"
+              exit={exitTransition}
+              entry={entryTransition}
+              className="image"
+            >
+              <div className="image__title c-white">
+                <div className="separator c-white --dmRegular --sm">-</div>
+                <h2>graphismes</h2>
+              </div>
+              <Img
+                fluid={data.img1.childImageSharp.fluid}
+                backgroundColor="#083a4b"
+              />
+            </TransitionLink>
+          </div>
+        </section>
+        <AnimWrapper transitionStatus={transitionStatus} exit={exit} />
       </div>
-      <section className="images" ref={imagesEl}>
-        <div className="images--left">
-          <div className="image">
-            <div className="image__title c-white">
-              <div className="separator c-white  --dmRegular --xs">-</div>
-              <h2>
-                metti<br></br>cottage
-              </h2>
-            </div>
-            <Img fluid={data.img1.childImageSharp.fluid} />
-          </div>
-          <TransitionLink
-            to="/projet/n20"
-            exit={exitTransition}
-            entry={entryTransition}
-            className="image"
-          >
-            <div className="image__title c-text">
-              <div className="separator c-text --dmRegular --xs">-</div>
-              <h2>
-                n<br></br>20
-              </h2>
-            </div>
-            <Img fluid={data.img2.childImageSharp.fluid} />
-          </TransitionLink>
-          <div className="card c-text">
-            <div className="border"></div>
-            <h2>Et si nous travaillons ensemble?</h2>
-            <div className="separator --dm --md c-text">_</div>
-            <h3>clement.karl.d@gmail.com</h3>
-          </div>
-        </div>
-        <div className="images--right">
-          <TransitionLink
-            to="/projet/n20"
-            exit={exitTransition}
-            entry={entryTransition}
-            className="image"
-          >
-            <div className="image__title c-secondary">
-              <div className="separator c-secondary --dmRegular --xs">-</div>
-              <h2>
-                n<br></br>20
-              </h2>
-            </div>
-            <Img fluid={data.img2.childImageSharp.fluid} />
-          </TransitionLink>
-          <div className="image">
-            <div className="image__title c-white">
-              <div className="separator c-white --dmRegular --sm">-</div>
-              <h2>
-                metti<br></br>cottage
-              </h2>
-            </div>
-            <Img fluid={data.img1.childImageSharp.fluid} />
-          </div>
-        </div>
-      </section>
-      <AnimWrapper transitionStatus={transitionStatus} exit={exit} />
     </Layout>
   )
 }
@@ -163,14 +185,14 @@ export const imagesQuery = graphql`
     img1: file(relativePath: { eq: "multicolored-skull.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     img2: file(relativePath: { eq: "plant.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
