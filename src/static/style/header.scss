@@ -30,7 +30,7 @@ header {
         bottom: 10px;
       }
     }
-    @media (max-width: $breakdown-md) {
+    @media (max-width: $breakdown-lg) {
       display: block;
     }
     &.--open {
@@ -66,7 +66,7 @@ header {
     .separator {
       color: $primary-text;
     }
-    @media (max-width: $breakdown-md) {
+    @media (max-width: $breakdown-lg) {
       position: fixed;
       top: 0rem;
       left: 0rem;
@@ -90,7 +90,7 @@ header {
         li {
           a {
             color: $brand-primary;
-            @media (max-width: $breakdown-md) {
+            @media (max-width: $breakdown-lg) {
               color: $primary-text;
             }
             &.--active {
@@ -101,7 +101,7 @@ header {
       }
       .separator {
         color: $brand-primary;
-        @media (max-width: $breakdown-md) {
+        @media (max-width: $breakdown-lg) {
           color: $primary-text;
         }
       }
@@ -115,7 +115,7 @@ header {
             color: $primary-text;
             &.--active {
               color: $brand-primary;
-              @media (max-width: $breakdown-md) {
+              @media (max-width: $breakdown-lg) {
                 color: white;
               }
             }

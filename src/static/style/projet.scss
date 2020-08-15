@@ -6,7 +6,7 @@
       padding: 10rem 5rem;
     }
     @media (max-width: $breakdown-sm) {
-      padding: 2rem 2rem 5rem 2rem;
+      padding: 7rem 2rem 5rem 2rem;
     }
     h1 {
       font-size: calc(#{$main-size} * 5);
@@ -26,7 +26,7 @@
       margin: 0rem auto 10rem auto;
       width: 70%;
       @media (max-width: $breakdown-sm) {
-        margin: 5rem auto 0rem auto;
+        margin: 0rem auto 5rem auto;
         width: 100%;
       }
       &.--specialMargin {

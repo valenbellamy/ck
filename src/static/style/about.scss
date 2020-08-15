@@ -69,18 +69,27 @@
       //   width: 60%;
       // }
     }
-    .cover-trip {
-      position: absolute;
-      top: 0rem;
-      left: 50%;
-      width: 50%;
-      height: 100%;
-      z-index: 2;
+    &.--specialSection {
       @media (max-width: $breakdown-sm) {
-        display: none;
+        padding-bottom: 330px;
       }
-      .gatsby-image-wrapper {
+      .cover-trip {
+        position: absolute;
+        top: 0rem;
+        left: 50%;
+        width: 50%;
         height: 100%;
+        z-index: 2;
+        @media (max-width: $breakdown-sm) {
+          bottom: 0px;
+          top: auto;
+          left: 0%;
+          width: 100%;
+          height: 300px;
+        }
+        .gatsby-image-wrapper {
+          height: 100%;
+        }
       }
     }
   }

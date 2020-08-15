@@ -150,9 +150,9 @@ function AProposPage({ data, transitionStatus, entry, exit }) {
             </div>
           </div>
         </section>
-        <section className="bg-dark">
+        <section className="bg-dark --specialSection">
           <div className="blk --noMarginXs">
-            <h2 className="c-white mb-1">Techniques</h2>
+            <h2 className="c-white mb-1">Parenthèse</h2>
             <div className="separator --dmRegular --sm c-white mb-2">-</div>
             <div className="text ff-mignon c-white">
               Voyage autour du monde sans avion

@@ -148,7 +148,7 @@ const IndexPage = ({ data, transitionStatus, entry, exit }) => {
               className="image"
             >
               <div className="image__title c-white">
-                <div className="separator c-white --dmRegular --sm">-</div>
+                <div className="separator c-white --dmRegular --xs">-</div>
                 <h2>dessins</h2>
               </div>
               <Img
@@ -163,7 +163,7 @@ const IndexPage = ({ data, transitionStatus, entry, exit }) => {
               className="image"
             >
               <div className="image__title c-white">
-                <div className="separator c-white --dmRegular --sm">-</div>
+                <div className="separator c-white --dmRegular --xs">-</div>
                 <h2>graphismes</h2>
               </div>
               <Img
